@@ -18,9 +18,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 1.0f;
     [SerializeField] private float jumpPower = 16f;
     private bool isFacingRight = true;
-    private bool hasActiveCreature = false;
+
+    private bool waterActive = false;
     private bool airActive = false;
-    public int availableSummons = 1;
+    private bool iceActive = false;
+    
     
     void Update()
     {
@@ -87,50 +89,43 @@ public class PlayerController : MonoBehaviour
 
     private void summonWaterCreature()
     {
-        if (!hasActiveCreature && availableSummons > 0)
+        if (!waterActive && !airActive && !iceActive)
         {
             waterCreature.SetActive(true);
-            hasActiveCreature = true;
-            availableSummons--;
+            waterActive = true;
         }
-        else if (hasActiveCreature && availableSummons == 0)
+        else if (waterActive && !airActive && !iceActive)
         {
             waterCreature.SetActive(false);
-            hasActiveCreature = false;
-            availableSummons++;
+            waterActive = false;
         }
     }
 
     private void summonAirCreature()
     {
-        if (!hasActiveCreature && availableSummons > 0)
+        if (!waterActive && !airActive && !iceActive)
         {
             airCreature.SetActive(true);
-            hasActiveCreature = true;
             airActive = true;
-            availableSummons--;
         }
-        else if (hasActiveCreature && availableSummons == 0)
+        else if (!waterActive && airActive && !iceActive)
         {
             airCreature.SetActive(false);
-            hasActiveCreature = false;
             airActive = false;
-            availableSummons++;
         }
     }
     private void summonIceCreature()
     {
-        if (!hasActiveCreature && availableSummons > 0)
+        if (!waterActive && !airActive && !iceActive)
         {
             iceCreature.SetActive(true);
-            hasActiveCreature = true;
-            availableSummons--;
+            iceActive = true;
         }
-        else if (hasActiveCreature && availableSummons == 0)
+        else if (!waterActive && !airActive && iceActive)
         {
             iceCreature.SetActive(false);
-            hasActiveCreature = false;
-            availableSummons++;
+            iceActive = false;
+
         }
     }
 }
