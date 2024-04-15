@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public GameObject waterCreature;
+    public GameObject airCreature;
+    public GameObject iceCreature;
 
     public GameOverScreen gameOverScreen;
     public Rigidbody2D rb;
@@ -17,6 +19,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpPower = 16f;
     private bool isFacingRight = true;
     private bool hasActiveCreature = false;
+    private bool airActive = false;
+    public int availableSummons = 1;
     
     void Update()
     {
@@ -31,19 +35,30 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R)) 
         {
-            summonCreature();
+            summonWaterCreature();
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            summonAirCreature();
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            summonIceCreature();
         }
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
+        if (airActive)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-        }
-        if (context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            if (context.performed && IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            }
+            if (context.canceled && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
         }
     }
 
@@ -67,29 +82,55 @@ public class PlayerController : MonoBehaviour
 
     public void GameOver()
     {
-        gameOverScreen.Setup();
+        //gameOverScreen.Setup();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void summonWaterCreature()
     {
-        //if (collision.gameObject.name == "Hazards")
-        //{
-        //    GameOver();
-        //    gameObject.SetActive(false);
-        //}
-    }
-
-    private void summonCreature()
-    {
-        if (!hasActiveCreature)
+        if (!hasActiveCreature && availableSummons > 0)
         {
             waterCreature.SetActive(true);
             hasActiveCreature = true;
+            availableSummons--;
         }
-        else if (hasActiveCreature)
+        else if (hasActiveCreature && availableSummons == 0)
         {
             waterCreature.SetActive(false);
             hasActiveCreature = false;
+            availableSummons++;
+        }
+    }
+
+    private void summonAirCreature()
+    {
+        if (!hasActiveCreature && availableSummons > 0)
+        {
+            airCreature.SetActive(true);
+            hasActiveCreature = true;
+            airActive = true;
+            availableSummons--;
+        }
+        else if (hasActiveCreature && availableSummons == 0)
+        {
+            airCreature.SetActive(false);
+            hasActiveCreature = false;
+            airActive = false;
+            availableSummons++;
+        }
+    }
+    private void summonIceCreature()
+    {
+        if (!hasActiveCreature && availableSummons > 0)
+        {
+            iceCreature.SetActive(true);
+            hasActiveCreature = true;
+            availableSummons--;
+        }
+        else if (hasActiveCreature && availableSummons == 0)
+        {
+            iceCreature.SetActive(false);
+            hasActiveCreature = false;
+            availableSummons++;
         }
     }
 }
