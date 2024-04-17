@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &12399444
+--- !u!1 &1178791352
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,10 +131,127 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 12399448}
-  - component: {fileID: 12399447}
-  - component: {fileID: 12399446}
-  - component: {fileID: 12399445}
+  - component: {fileID: 1178791353}
+  - component: {fileID: 1178791356}
+  - component: {fileID: 1178791355}
+  - component: {fileID: 1178791354}
+  m_Layer: 5
+  m_Name: DialogueBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1178791353
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178791352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2102786794}
+  m_Father: {fileID: 1281385684}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1720, y: 900}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1178791354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178791352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017015da7430db74c9c2faeafc980c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 2102786795}
+  lines:
+  - 'Knight: We made it!'
+  - "Knight: Summoner, I\u2019m so honored to have met you. I don\u2019t think I
+    would have made it out, if not for your help."
+  - 'Knight: There is always a position available in my kingdom for you. Just say
+    the word, and I can have you hired.'
+  - 'Knight: What? Nepotism? No, no, consider this escape to be our training period.
+    You have more than proven yourself.'
+  - "Knight: And even if we don\u2019t work together, well\u2026 Could I take you
+    out for\u2014"
+  - 'Demon Lord: Human, wait!'
+  - 'Demon Lord: I have thoroughly considered all aspects of the work contract, and
+    I have decided to add one more thing for you!'
+  - 'Demon Lord: If you work for me, I will provide dental! Yes, those pesky toothaches
+    and cavities will not be an issue. I will only kidnap the finest dentists of
+    the land to work on you.'
+  - 'Demon Lord: If you work for me, I will provide dental! Yes, those pesky toothaches
+    and cavities will not be an issue. I will only kidnap the finest dentists of
+    the land to work on you.'
+  - 'Knight: How have you not given up yet?'
+  - "Knight: Come on, Summoner. Don\u2019t listen to the ramblings of the dark and
+    evil Demon Lord. Come to my kingdom instead."
+  - "Demon Lord: Nonsense, let the human speak! Human, you decide \u2014 are you
+    going to that lame, boring kingdom, or will you seek employment with me instead?"
+  textSpeed: 0.05
+  sceneName: EndCutscene
+--- !u!114 &1178791355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178791352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1178791356
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178791352}
+  m_CullTransparentMesh: 1
+--- !u!1 &1281385680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1281385684}
+  - component: {fileID: 1281385683}
+  - component: {fileID: 1281385682}
+  - component: {fileID: 1281385681}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -142,13 +259,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &12399445
+--- !u!114 &1281385681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12399444}
+  m_GameObject: {fileID: 1281385680}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
@@ -159,13 +276,13 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &12399446
+--- !u!114 &1281385682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12399444}
+  m_GameObject: {fileID: 1281385680}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
@@ -182,13 +299,13 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!223 &12399447
+--- !u!223 &1281385683
 Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12399444}
+  m_GameObject: {fileID: 1281385680}
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
@@ -205,19 +322,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!224 &12399448
+--- !u!224 &1281385684
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12399444}
+  m_GameObject: {fileID: 1281385680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2083399150}
+  - {fileID: 1178791353}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -226,7 +343,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &455721450
+--- !u!1 &1287382888
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,9 +351,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 455721453}
-  - component: {fileID: 455721452}
-  - component: {fileID: 455721451}
+  - component: {fileID: 1287382891}
+  - component: {fileID: 1287382890}
+  - component: {fileID: 1287382889}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -244,25 +361,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &455721451
+--- !u!81 &1287382889
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455721450}
+  m_GameObject: {fileID: 1287382888}
   m_Enabled: 1
---- !u!20 &455721452
+--- !u!20 &1287382890
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455721450}
+  m_GameObject: {fileID: 1287382888}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 0}
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -303,13 +420,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &455721453
+--- !u!4 &1287382891
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455721450}
+  m_GameObject: {fileID: 1287382888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -318,7 +435,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1064572681
+--- !u!1 &1644867596
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -326,9 +443,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1064572684}
-  - component: {fileID: 1064572683}
-  - component: {fileID: 1064572682}
+  - component: {fileID: 1644867599}
+  - component: {fileID: 1644867598}
+  - component: {fileID: 1644867597}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -336,13 +453,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1064572682
+--- !u!114 &1644867597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064572681}
+  m_GameObject: {fileID: 1644867596}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
@@ -356,13 +473,13 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!114 &1064572683
+--- !u!114 &1644867598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064572681}
+  m_GameObject: {fileID: 1644867596}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
@@ -371,13 +488,13 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!4 &1064572684
+--- !u!4 &1644867599
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064572681}
+  m_GameObject: {fileID: 1644867596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -386,7 +503,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1640316873
+--- !u!1 &2102786793
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -394,9 +511,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1640316874}
-  - component: {fileID: 1640316876}
-  - component: {fileID: 1640316875}
+  - component: {fileID: 2102786794}
+  - component: {fileID: 2102786796}
+  - component: {fileID: 2102786795}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -404,19 +521,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1640316874
+--- !u!224 &2102786794
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640316873}
+  m_GameObject: {fileID: 2102786793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2083399150}
+  m_Father: {fileID: 1178791353}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -424,13 +541,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 1500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1640316875
+--- !u!114 &2102786795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640316873}
+  m_GameObject: {fileID: 2102786793}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -513,150 +630,11 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1640316876
+--- !u!222 &2102786796
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640316873}
-  m_CullTransparentMesh: 1
---- !u!1 &2083399149
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2083399150}
-  - component: {fileID: 2083399153}
-  - component: {fileID: 2083399152}
-  - component: {fileID: 2083399151}
-  m_Layer: 5
-  m_Name: DialogueBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2083399150
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083399149}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1640316874}
-  m_Father: {fileID: 12399448}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1720, y: 900}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2083399151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083399149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017015da7430db74c9c2faeafc980c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 1640316875}
-  lines:
-  - "(Ugh\u2026 Your head hurts\u2026)"
-  - (You open your eyes and see a dark, eerie throne room surrounded by demons, imps,
-    and bright torches everywhere.)
-  - "(What? You could\u2019ve sworn you were just walking down Bruinwalk\u2026 Where
-    are you now?)"
-  - "Demon Lord: Heh heh heh\u2026 My ritual was a success."
-  - "Demon Lord: Welcome, human, to my dark and evil castle\u2026 I have summoned
-    you from your world to serve as my new underling, granted with the power to summon
-    magic creatures to do your bidding\u2026 "
-  - 'Demon Lord: Now, join me in my conquest, and you will be rewarded beyond your
-    wildest dreams.'
-  - 'Demon Lord: Now, join me in my conquest, and you will be rewarded beyond your
-    wildest dreams.'
-  - "(Wait a minute\u2026 Your memories are coming back. The starship running down
-    Bruinwalk grows faster and faster, unimpeded by friction. No! Don\u2019t come
-    closer!)"
-  - "Demon Lord: Er\u2026 Hello?"
-  - 'Demon Lord: Human?'
-  - 'Demon Lord: You must be considering my offer, but surely the answer will be
-    a yes?'
-  - "(Who can you call about this? Your RA? Your professor? Gene Block? How can they
-    let instruments of mass destruction shoot down Bruinwalk like that? You\u2019re
-    going to post about this on r/UCLA immediately!)"
-  - 'Demon Lord: Ah, well, you must be too impressed to speak.'
-  - "Demon Lord: Don\u2019t worry, I understand. I\u2019m going to get the paperwork
-    right now."
-  - "Demon Lord: As your wonderful employer, I\u2019m just going to forge your signature
-    right here\u2026"
-  - 'Knight: Stop right there!'
-  - 'Demon Lord: What? How dare a human knight intrude in my castle!'
-  - 'Demon Lord: Security!'
-  - 'Knight: Your evil practices will end here! Come with me, Summoner! My kingdom
-    has HR! '
-  - (Before you can say a word, the knight hauls you right out of the throne room.)
-  - 'Knight: Good thing I found you when I did.'
-  - 'Knight: Good thing I found you when I did.'
-  - "Knight: Luckily, he said you\u2019re a summoner. That will make our escape that
-    much easier."
-  - "Knight: I know the way out, but I don\u2019t know if I\u2019ll be able to disable
-    the traps and get to the exits \u2014 so that\u2019s your job, okay?"
-  - 'Demon King: Wait, human!'
-  - "Demon King: Don\u2019t listen to that knight there \u2014 we have mandatory
-    diversity training! There will be no racial discrimination if you work for my
-    dark and evil army!"
-  - "Knight: He already caught up? Hurry up, let\u2019s go!"
-  textSpeed: 0.05
-  sceneName: TutorialLevel
---- !u!114 &2083399152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083399149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2083399153
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083399149}
+  m_GameObject: {fileID: 2102786793}
   m_CullTransparentMesh: 1
